@@ -33,7 +33,7 @@ public class Document {
         this.texte = leftPart + middlePart + rightPart;
     }
     public void clear() {
-        this.texte = "a";
+        this.texte = "";
     }
 
     public void effacer(int start, int end) {
