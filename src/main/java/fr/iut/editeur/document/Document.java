@@ -32,6 +32,9 @@ public class Document {
         String middlePart = this.texte.substring(start, end).toUpperCase();
         this.texte = leftPart + middlePart + rightPart;
     }
+    public void clear() {
+        this.texte = "a";
+    }
 
     @Override
     public String toString() {
