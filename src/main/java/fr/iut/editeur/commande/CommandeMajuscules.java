@@ -13,6 +13,7 @@ public class CommandeMajuscules extends CommandeDocument {
     public void executer() {
         if(parameters.length < 3) {
             System.err.println("Format attendu : majuscules;depart;fin");
+            description();
             return;
         }
         int depart = Integer.parseInt(parameters[1]);
@@ -22,4 +23,8 @@ public class CommandeMajuscules extends CommandeDocument {
 
     }
 
+    @Override
+    public void description() {
+        System.out.println("Met en majuscules le texte entre les positions depart et fin");
+    }
 }

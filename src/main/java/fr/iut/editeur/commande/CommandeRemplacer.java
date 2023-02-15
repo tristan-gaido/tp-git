@@ -13,6 +13,7 @@ public class CommandeRemplacer extends CommandeDocument {
     public void executer() {
         if(parameters.length < 3) {
             System.err.println("Format attendu : remplacer;depart;fin;chaine");
+            description();
             return;
         }
         int depart = Integer.parseInt(parameters[1]);
@@ -24,6 +25,11 @@ public class CommandeRemplacer extends CommandeDocument {
         this.document.remplacer(depart, fin, remplacement);
         super.executer();
 
+    }
+
+    @Override
+    public void description() {
+        System.out.println("Remplace le texte entre les positions depart et fin par la chaine");
     }
 
 }
