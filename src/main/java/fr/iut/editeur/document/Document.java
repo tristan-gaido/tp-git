@@ -32,6 +32,15 @@ public class Document {
         String middlePart = this.texte.substring(start, end).toUpperCase();
         this.texte = leftPart + middlePart + rightPart;
     }
+    public void clear() {
+        this.texte = "a";
+    }
+
+    public void effacer(int start, int end) {
+        String leftPart = this.texte.substring(0, start);
+        String rightPart = this.texte.substring(end);
+        this.texte = leftPart + rightPart;
+    }
 
     @Override
     public String toString() {
