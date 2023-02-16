@@ -16,11 +16,11 @@ jobs:
         with:
           java-version: 17
       - name: Generate Javadoc
-        run: mvn javadoc:javadoc
+        run: mvn javadoc::javadoc
       - name: Publish Javadoc
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.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 }}
           publish_dir: ./target/site/apidocs/
         permissions:
           contents: write
