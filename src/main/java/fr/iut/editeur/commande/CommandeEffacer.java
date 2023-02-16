@@ -2,9 +2,18 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
+/**
+ * The type Commande effacer.
+ */
 public class CommandeEffacer extends CommandeDocument {
 
 
+    /**
+     * Instantiates a new Commande effacer.
+     *
+     * @param document   the document
+     * @param parameters the parameters
+     */
     public CommandeEffacer(Document document, String[] parameters) {
         super(document, parameters);
     }

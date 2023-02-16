@@ -2,9 +2,18 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
+/**
+ * The type Commande remplacer.
+ */
 public class CommandeRemplacer extends CommandeDocument {
 
 
+    /**
+     * Instantiates a new Commande remplacer.
+     *
+     * @param document   the document
+     * @param parameters the parameters
+     */
     public CommandeRemplacer(Document document, String[] parameters) {
         super(document, parameters);
     }

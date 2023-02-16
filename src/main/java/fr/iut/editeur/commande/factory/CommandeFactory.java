@@ -3,10 +3,18 @@ package fr.iut.editeur.commande.factory;
 import fr.iut.editeur.commande.*;
 import fr.iut.editeur.document.Document;
 
+/**
+ * The type Commande factory.
+ */
 public class CommandeFactory {
 
     private static CommandeFactory instance;
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static CommandeFactory getInstance() {
         if(instance == null) {
             instance = new CommandeFactory();
@@ -16,6 +24,14 @@ public class CommandeFactory {
 
     private CommandeFactory() {}
 
+    /**
+     * Create command commande.
+     *
+     * @param name       the name
+     * @param document   the document
+     * @param parameters the parameters
+     * @return the commande
+     */
     public Commande createCommand(String name, Document document, String[] parameters) {
         switch (name) {
             case "ajouter" : return new CommandeAjouter(document, parameters);
