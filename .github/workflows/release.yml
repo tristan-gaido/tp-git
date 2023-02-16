@@ -1,4 +1,4 @@
-name: Build and Release
+name: Build une release
 
 on:
   push:
@@ -8,9 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
 
       - name: Setup JDK
@@ -18,15 +17,17 @@ jobs:
         with:
           java-version: 17
 
-      - name: Build executable jar
+      - name: Set Maven version
+        run: mvn versions:set -DnewVersion=$GITHUB_REF_NAME -DgenerateBackupPoms=false
+        env:
+          GITHUB_REF_NAME: ${{ env.GITHUB_REF#refs/tags/ }}
+
+      - name: Build jar
         run: mvn package
 
-      - name: Create release
-        id: create_release
+      - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
           files: |
-            target/EditeurDeTexte-0.0.1.jar
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            target/EditeurDeTexte-${{ env.GITHUB_REF_NAME }}.jar
+          token: ${{ secrets.GITHUB_TOKEN }}
