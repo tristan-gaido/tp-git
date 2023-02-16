@@ -6,21 +6,22 @@ on:
       - master
 
 jobs:
-  publish-javadoc:
+  publish_javadoc:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Setup Java 17
+
+      - name: Setup Java
         uses: actions/setup-java@v2
         with:
           java-version: 17
+
       - name: Generate Javadoc
         run: mvn javadoc::javadoc
+
       - name: Publish Javadoc
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.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 }}
           publish_dir: ./target/site/apidocs/
-        permissions:
-          contents: write
