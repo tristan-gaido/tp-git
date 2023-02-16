@@ -75,7 +75,7 @@ public class Document {
      */
     public void minuscules(int start, int end) {
         String leftPart = this.texte.substring(0, start);
-        String middlePart = this.texte.substring(start, end).toLowerCase();
+        String middlePart = this.texte.substring(start, end).toUpperCase();
         String rightPart = this.texte.substring(end);
         this.texte = leftPart + middlePart + rightPart;
     }
