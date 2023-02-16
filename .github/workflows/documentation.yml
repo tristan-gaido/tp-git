@@ -23,5 +23,5 @@ jobs:
       - name: Publish Javadoc
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.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 }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./target/site/apidocs/
