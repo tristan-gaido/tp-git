@@ -14,8 +14,8 @@ jobs:
 
       - name: Setup JDK
         uses: actions/setup-java@v1
-          with:
-            java-version: 17
+        with:
+          java-version: 17
 
       - name: Generate Javadoc
         run: mvn javadoc::javadoc
