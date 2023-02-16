@@ -21,7 +21,6 @@ public class CommandeMinuscules extends CommandeDocument {
 
     @Override
     public void description() {
-        super.description();
         System.out.println("majuscules;0;5");
     }
 
