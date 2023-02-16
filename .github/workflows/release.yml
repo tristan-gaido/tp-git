@@ -19,8 +19,6 @@ jobs:
 
       - name: Set Maven version
         run: mvn versions:set -DnewVersion=$GITHUB_REF_NAME -DgenerateBackupPoms=false
-        env:
-          GITHUB_REF_NAME: ${{ env.GITHUB_REF#refs/tags/ }}
 
       - name: Build jar
         run: mvn package
