@@ -2,9 +2,18 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
+/**
+ * The type Commande majuscules.
+ */
 public class CommandeMajuscules extends CommandeDocument {
 
 
+    /**
+     * Instantiates a new Commande majuscules.
+     *
+     * @param document   the document
+     * @param parameters the parameters
+     */
     public CommandeMajuscules(Document document, String[] parameters) {
         super(document, parameters);
     }

@@ -1,9 +1,19 @@
 package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
+
+/**
+ * The type Commande minuscules.
+ */
 public class CommandeMinuscules extends CommandeDocument {
 
 
+    /**
+     * Instantiates a new Commande minuscules.
+     *
+     * @param document   the document
+     * @param parameters the parameters
+     */
     public CommandeMinuscules(Document document, String[] parameters) {
         super(document, parameters);
     }
