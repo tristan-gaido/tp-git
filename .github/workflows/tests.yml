@@ -1,21 +1,21 @@
-#name: Tests EditeurDeTexte
-#
-#on:
-#  push:
-#    branches: [ '*' ]
-#
-#jobs:
-#  test:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
-#      - name: Setup JDK
-#        uses: actions/setup-java@v1
-#        with:
-#          java-version: 17
-#
-#      - name: Run tests
-#        run: mvn test
+name: Tests EditeurDeTexte
+
+on:
+  push:
+    branches: [ '*' ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+
+      - name: Run tests
+        run: mvn test
