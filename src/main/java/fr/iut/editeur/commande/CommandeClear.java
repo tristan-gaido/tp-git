@@ -12,10 +12,16 @@ public class CommandeClear extends CommandeDocument {
     public void executer() {
         if(parameters.length < 1) {
             System.err.println("Format attendu : clear;");
+            description();
             return;
         }
         this.document.clear();
         super.executer();
+    }
+
+    @Override
+    public void description() {
+        System.out.println("Efface le texte du document");
     }
 
 }
